@@ -1,0 +1,23 @@
+{
+  "en" : {
+    "navigation": {
+      "home": "Home",
+      "about": "About",
+      "contact": "Contact"
+    }
+  },
+  "ua" : {
+    "navigation": {
+          "home": "Головна",
+          "about": "Про нас",
+          "contact": "Контакти"
+        }
+  },
+  "ru" : {
+    "navigation": {
+          "home": "Главная",
+          "about": "О нас",
+          "contact": "Контакты"
+        }
+  }
+}

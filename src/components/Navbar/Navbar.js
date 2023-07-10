@@ -1,13 +1,22 @@
-import { Link } from "react-router-dom";
-
+import { NavLink } from "react-router-dom";
+const NavItem = ({text, link}) => {
+    return (
+        <NavLink to={link} style={({isActive}) => {
+            return {color: isActive ? 'green' : ''}}} >{text}</NavLink>
+    )
+}
 export const Navbar = () => {
     return (
         <div className={'container'}>
-            <div className={'content'}>
-                <Link to={'/'}>Home</Link>
-                <Link to={'about'}>About</Link>
-                <Link to={'contact'}>Contact</Link>
-            </div>
+            <nav className={'content'}>
+                <NavItem text={'Home'} link={'/'}/>
+                <NavItem text={'About'} link={'/about'} />
+                <NavItem text={'Contact'} link={'/contact'} />
+
+                {/*<NavLink to={'contact'} style={({isActive}) => { return {*/}
+                {/*                        color: isActive ? 'red' : ''*/}
+                {/*                    }}} >Contact</NavLink>*/}
+            </nav>
         </div>
     )
 }

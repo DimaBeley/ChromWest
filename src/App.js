@@ -2,7 +2,7 @@ import './index.css';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import { HomePage, AboutPage, ContactPage } from './pages';
-import Navbar from "./components/Navbar";
+import { Navbar } from "./components/Navbar";
 
 export const App = () => {
     return  (

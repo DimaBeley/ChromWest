@@ -14,6 +14,12 @@
   align-items: center;
 }
 
+@mixin flex-end {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
 @mixin full-screen {
   height: 100%;
   width: 100%;
@@ -27,38 +33,15 @@
 
 @mixin container {
   @include full-screen;
-  @include main-bg;
-  @include flex-start;
+  display: flex;
   overflow: auto;
   flex-direction: column;
 }
 
 @mixin content {
-  @include background-color;
-  @include flex-start;
-  flex-direction: column;
-  margin-top: 50px;
-  padding: 0 80px 50px 80px;
+  flex-direction: row;
+  width: 100%;
   outline: 4px solid black;
-  @media only screen and (max-width: 600px) {
-    padding: 0 35px 30px 35px;
-    margin-top: 30px;
-  }
-  @media only screen and (max-width: 400px) {
-    padding: 0 10px 30px 10px;
-    margin-top: 25px;
-  }
 }
 
-@mixin box-regular {
-  @include flex-center;
-  @include border-radius;
-  @include background-color;
-  margin: 20px auto;
-  width: 300px;
-  height: 56px;
-  font-size: 22px;
-  color: white;
-  text-transform: uppercase;
-}
 

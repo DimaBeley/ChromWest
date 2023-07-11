@@ -2,18 +2,26 @@
 
 .container {
   @include variables.full-screen;
-  @include variables.flex-center;
+  //@include variables.flex-center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   flex-direction: row;
   background-color: white;
   //margin: 0 100px;
+  & .logo {
+    left: 85px;
+    position: relative;
+    width: 80px;
+    height: 70px;
+    background-image: url("../../img/icon/logo.png");
+    background-size: cover;
+  }
   & .nav {
     @include variables.flex-center;
     font-size: 22px;
-    flex: 1;
     height: 70px;
     background-color: white;
-    position: relative;
-    left: 35px;
     & :hover {
             background-color: silver;
           }
@@ -30,6 +38,7 @@
     right: 100px;
     border: none;
     & select {
+      cursor: pointer;
       border: none;
       width: 45px;
       text-transform: uppercase;

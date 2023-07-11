@@ -14,6 +14,7 @@ export const Navbar = () => {
     }
     return (
         <div className={styles.container}>
+            <div className={styles.logo}></div>
             <nav className={styles.nav}>
                 <NavItem text={t('home')} link={'/'}/>
                 <NavItem text={t('about')} link={'/about'} />

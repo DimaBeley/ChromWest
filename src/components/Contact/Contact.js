@@ -1,7 +1,10 @@
+import { useTranslation } from 'react-i18next'
+
 export const Contact = () => {
-  return (
-    <div className="container">
-      <h1>Contact Page</h1>
-    </div>
-  );
+    const { t } = useTranslation();
+    return (
+        <div className="container">
+            <h1>{t('contact')}</h1>
+        </div>
+    );
 }

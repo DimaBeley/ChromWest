@@ -1,7 +1,10 @@
+import { useTranslation } from 'react-i18next'
+
 export const Home = () => {
-  return (
-    <div className="container">
-      <h1>Home Page</h1>
-    </div>
-  );
+    const { t } = useTranslation();
+        return (
+            <div className="container">
+                <h1>{t('home')}</h1>
+            </div>
+        );
 }

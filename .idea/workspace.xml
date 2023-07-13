@@ -28,6 +28,7 @@
       <change beforePath="$PROJECT_DIR$/src/constants/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/data.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/data.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/img/icon/language.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/icon/language.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/icon/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/icon/logo.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/logo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/logo.svg" afterDir="false" />
@@ -74,12 +75,13 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;Z:/work/moldelectrica&quot;,
+    &quot;last_opened_file_path&quot;: &quot;Z:/work/chromwest&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;ssh.settings&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\WebStorm 2022.2.3\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -106,7 +108,10 @@
       <workItem from="1689003256918" duration="6099000" />
       <workItem from="1689012929032" duration="1872000" />
       <workItem from="1689030861654" duration="15119000" />
-      <workItem from="1689097274793" duration="4069000" />
+      <workItem from="1689097274793" duration="4358000" />
+      <workItem from="1689167565072" duration="2500000" />
+      <workItem from="1689171347081" duration="4205000" />
+      <workItem from="1689250255277" duration="10769000" />
     </task>
     <servers />
   </component>

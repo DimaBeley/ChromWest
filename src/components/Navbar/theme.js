@@ -10,6 +10,15 @@ export const Theme = createTheme({
     },
   },
   components : {
+    MuiMenu: {
+      styleOverrides: {
+        root: {
+          ul: {
+            padding: 0
+          }
+        }
+      }
+    },
     MuiSelect: {
       styleOverrides: {
         root: {

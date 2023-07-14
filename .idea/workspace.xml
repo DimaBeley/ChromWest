@@ -21,6 +21,7 @@
       <change beforePath="$PROJECT_DIR$/src/components/Home/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Home/Home.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Home/Home.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Home/Home.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Home/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Home/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navbar/LanguageSelect.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar/LanguageSelect.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Navbar/NavItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar/NavItem.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Navbar/Navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar/Navbar.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Navbar/Navbar.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar/Navbar.module.scss" afterDir="false" />
@@ -113,7 +114,7 @@
       <workItem from="1689167565072" duration="2500000" />
       <workItem from="1689171347081" duration="4205000" />
       <workItem from="1689250255277" duration="11390000" />
-      <workItem from="1689345690212" duration="10668000" />
+      <workItem from="1689345690212" duration="12026000" />
     </task>
     <servers />
   </component>

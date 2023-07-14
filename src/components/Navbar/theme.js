@@ -22,8 +22,14 @@ export const Theme = createTheme({
     MuiSelect: {
       styleOverrides: {
         root: {
+          margin: 0,
+          ':hover': {
+            ':before': {
+              borderBottom: '1px solid black !important',
+            }
+          },
           ':before': {
-              border: 'none'
+              border: 'none',
           },
           ':after': {
             border: 'none'

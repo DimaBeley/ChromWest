@@ -19,14 +19,14 @@ export const LanguageSelect = () => {
 
     return (
         <Box sx={{ flexGrow: 0 }}>
-            <LanguageIcon sx={{position: 'relative', top: '27px', left: '6px'}} />
+            <LanguageIcon sx={{position: 'relative', top: '12px', left: '6px'}} />
             <FormControl variant="standard" sx={{ m: 1, minWidth: 65, color: 'white' }}>
                 <Select
                   value={currentLang}
                   onChange={onChangeLang}
                   label="Language"
                   before={{border: 'none'}}
-                  sx={{ my: 2, textTransform: 'uppercase', textAlign: 'center'}}
+                  sx={{ my: 2, textTransform: 'uppercase', textAlign: 'center', margin: '0'}}
                 >
                     {LANGUAGES.map(({code}) => (
                         <MenuItem key={code} value={code}>

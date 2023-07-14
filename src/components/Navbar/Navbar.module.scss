@@ -55,7 +55,18 @@
   }
 }
 
-.link {
+.navigationLink {
   text-decoration: none;
   color: black;
+  padding: 8px;
+  border-radius: 4px;
+}
+.navigationLinkHover {
+  &:hover {
+    @include variables.border-bottom;
+    border-radius: 4px 4px 0 0;
+  }
+}
+.navigationLinkActive {
+  @include variables.background-color;
 }

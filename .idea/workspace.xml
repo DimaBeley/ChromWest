@@ -25,6 +25,7 @@
       <change beforePath="$PROJECT_DIR$/src/components/Navbar/Navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar/Navbar.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Navbar/Navbar.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar/Navbar.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Navbar/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navbar/theme.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar/theme.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/constants/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/data.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/data.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/img/icon/language.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/icon/language.png" afterDir="false" />
@@ -111,7 +112,8 @@
       <workItem from="1689097274793" duration="4358000" />
       <workItem from="1689167565072" duration="2500000" />
       <workItem from="1689171347081" duration="4205000" />
-      <workItem from="1689250255277" duration="10769000" />
+      <workItem from="1689250255277" duration="11390000" />
+      <workItem from="1689345690212" duration="6713000" />
     </task>
     <servers />
   </component>

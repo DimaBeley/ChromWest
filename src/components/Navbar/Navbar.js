@@ -22,6 +22,7 @@ import { NavItem } from './NavItem'
 // import Tooltip from '@mui/material/Tooltip';
 import { LANGUAGES } from '../../constants'
 import { useTranslation } from 'react-i18next'
+import styles from './Navbar.module.scss';
 
 export const Navbar = () => {
     const { i18n, t } = useTranslation();
@@ -68,7 +69,7 @@ export const Navbar = () => {
                 LOGO
               </Typography>
 
-              <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+              <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' }}}>
                 <IconButton
                   size="large"
                   aria-label="account of current user"
@@ -93,17 +94,15 @@ export const Navbar = () => {
                   }}
                   open={Boolean(anchorElNav)}
                   onClose={handleCloseNavMenu}
-                  sx={{
-                    display: { xs: 'block', md: 'none' },
-                  }}
+                  sx={{display: { xs: 'block', md: 'none'}}}
                 >
-                    <MenuItem onClick={handleCloseNavMenu}>
+                    <MenuItem onClick={handleCloseNavMenu} sx={{padding: 0}}>
                         <NavItem text={t('home')} link={'/'} />
                     </MenuItem>
-                    <MenuItem onClick={handleCloseNavMenu}>
+                    <MenuItem onClick={handleCloseNavMenu} sx={{padding: 0}}>
                         <NavItem text={t('about')} link={'/about'} />
                     </MenuItem>
-                    <MenuItem onClick={handleCloseNavMenu}>
+                    <MenuItem onClick={handleCloseNavMenu} sx={{padding: 0}}>
                         <NavItem text={t('contact')} link={'/contact'} />
                     </MenuItem>
                 </Menu>
@@ -128,14 +127,26 @@ export const Navbar = () => {
                 LOGO
               </Typography>
               <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-                  <Button variant={'text'}>
-                      <NavItem text={t('home')} link={'/'} />
+                  <Button sx={{padding: 0}}>
+                      <NavItem text={t('home')}
+                               link={'/'}
+                               className={styles.navigationLinkHover}
+                               style={({isActive}) => {return {backgroundColor: isActive ? 'rgba(0, 0, 0, 0.05)' : ''}}}
+                      />
                   </Button>
-                  <Button>
-                      <NavItem text={t('about')} link={'/about'} />
+                  <Button sx={{padding: 0}}>
+                      <NavItem text={t('about')}
+                               link={'/about'}
+                               className={styles.navigationLinkHover}
+                               style={({isActive}) => {return {backgroundColor: isActive ? 'rgba(0, 0, 0, 0.05)' : ''}}}
+                      />
                   </Button>
-                  <Button>
-                      <NavItem text={t('contact')} link={'/contact'} />
+                  <Button sx={{padding: 0}}>
+                      <NavItem text={t('contact')}
+                               link={'/contact'}
+                               className={styles.navigationLinkHover}
+                               style={({isActive}) => {return {backgroundColor: isActive ? 'rgba(0, 0, 0, 0.05)' : ''}}}
+                      />
                   </Button>
               </Box>
               <Box sx={{ flexGrow: 0 }}>
@@ -161,31 +172,3 @@ export const Navbar = () => {
       </ThemeProvider>
   );
 }
-//
-// import { NavItem } from './NavItem'
-
-// import styles from './Navbar.module.scss'
-//
-// export const Navbar = () => {
-
-//     return (
-//         <div className={styles.container}>
-//             <div className={styles.logo}></div>
-//             <nav className={styles.nav}>
-//                 <NavItem text={t('home')} link={'/'}/>
-//                 <NavItem text={t('about')} link={'/about'} />
-//                 <NavItem text={t('contact')} link={'/contact'} />
-//             </nav>
-//             <div className={styles.langSelect}>
-//                 <div className={styles.icon}/>
-//                 <select defaultValue={savedLang || "ua"} onChange={onChangeLang}>
-//                         {LANGUAGES.map(({ code, label }) => (
-//                           <option key={code} value={code}>
-//                             {code}
-//                           </option>
-//                         ))}
-//                       </select>
-//             </div>
-//         </div>
-//     )
-// }

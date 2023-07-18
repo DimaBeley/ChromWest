@@ -29,7 +29,7 @@ export const LanguageSelect = () => {
                   sx={{ my: 2, textTransform: 'uppercase', textAlign: 'center', margin: '0'}}
                 >
                     {LANGUAGES.map(({code}) => (
-                        <MenuItem key={code} value={code}>
+                        <MenuItem key={code} value={code} sx={{textTransform: 'uppercase'}}>
                           {code}
                         </MenuItem>))}
                 </Select>

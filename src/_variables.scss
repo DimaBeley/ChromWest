@@ -25,10 +25,15 @@
   width: 100%;
 }
 @mixin border-radius {
-  border-radius: 8px;
+  border-radius: 4px;
 }
 @mixin background-color {
-  background-color: rgba(0,0,0, 0.6);
+  background-color: rgba(0,0,0, 0.1);
+}
+
+@mixin border-bottom {
+  border-bottom: 1px solid black;
+  margin-bottom: -1px;
 }
 
 @mixin container {

@@ -1,8 +1,13 @@
 import { NavLink } from "react-router-dom";
+import styles from './Navbar.module.scss';
 
-export const NavItem = ({text, link}) => {
+export const NavItem = ({text, link, className, style}) => {
     return (
-        <NavLink to={link} style={({isActive}) => {
-            return { color: isActive ? 'green' : '' }}} >{text}</NavLink>
+        <NavLink to={link}
+                 className={`${styles.navigationLink} ${className}`}
+                 style={style}
+        >
+            {text}
+        </NavLink>
     )
 }

@@ -1,48 +1,15 @@
 @use './src/_variables.scss';
 
-.container {
-  @include variables.full-screen;
-  @include variables.flex-center;
-  flex-direction: row;
-  background-color: white;
-  //margin: 0 100px;
-  & .nav {
-    @include variables.flex-center;
-    font-size: 22px;
-    flex: 1;
-    height: 70px;
-    background-color: white;
-    position: relative;
-    left: 35px;
-    & :hover {
-            background-color: silver;
-          }
-    & a {
-      padding: 20px;
-      text-decoration: none;
-
-    }
-  }
-  & .langSelect {
-    @include variables.flex-center;
-    flex: 0;
-    position: relative;
-    right: 100px;
-    border: none;
-    & select {
-      border: none;
-      width: 45px;
-      text-transform: uppercase;
-    }
-    & select:focus-visible {
-              outline: -webkit-focus-ring-color none !important;
-          }
-    & .icon {
-      width: 25px;
-      height: 25px;
-      background-image: url("../../img/icon/language.png");
-      background-size: cover;
-      color: black;
-    }
+.navigationLink {
+  text-decoration: none;
+  color: black;
+  padding: 10px 20px 10px 20px;
+  border-radius: 4px;
+  width: 100%;
+}
+.navigationLinkHover {
+  &:hover {
+    @include variables.border-bottom;
+    border-radius: 4px 4px 0 0;
   }
 }

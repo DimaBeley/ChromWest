@@ -7,4 +7,6 @@ export const ua = {
     phone: 'Телефон',
     oleksandr: 'Олександр',
     vasily: 'Василь',
+    clickToCopy: 'Натисніть, щоб скопіювати',
+    copied: 'Скопійовано'
 }

@@ -1,7 +1,6 @@
 export const LANGUAGES = [
   { label: "Українська", code: "ua" },
   { label: "English", code: "en" },
-  { label: "Русский", code: "ru" },
 ];
 
 export const ContactData = {
@@ -13,5 +12,5 @@ export const ContactData = {
     VasilyNumber: '+380505870440'
   },
   address: 'Mukachevo, 123 str, 42',
-  email: 'beleiAlex@gmail.com'
+  email: 'beleiTest@gmail.com'
 }

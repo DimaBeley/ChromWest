@@ -34,7 +34,7 @@
       <change beforePath="$PROJECT_DIR$/src/constants/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/data.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/data.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/img/icon/language.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/icon/language.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/icon/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/icon/logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/icon/logo.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/logo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/logo.svg" afterDir="false" />
@@ -47,7 +47,7 @@
       <change beforePath="$PROJECT_DIR$/src/translations/i18n.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/translations/i18n.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/translations/lang/en.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/translations/lang/en.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/translations/lang/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/translations/lang/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/translations/lang/ru.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/translations/lang/ru.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/translations/lang/ru.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/translations/lang/ua.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/translations/lang/ua.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/translations/resoures.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/translations/resoures.js" afterDir="false" />
     </list>

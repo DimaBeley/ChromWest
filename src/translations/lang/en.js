@@ -7,4 +7,6 @@ export const en = {
     phone: 'Phone number',
     oleksandr: 'Oleksandr',
     vasily: 'Vasily',
+    clickToCopy: 'Click to copy',
+    copied: 'Copied'
 }

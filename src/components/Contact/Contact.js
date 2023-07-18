@@ -10,11 +10,13 @@ import {
     ListItemButton,
     ListSubheader,
     Snackbar,
-    Alert
+    Alert,
+    Tooltip,
 } from "@mui/material";
 import copy from "copy-to-clipboard";
 import { ContactData } from '../../constants'
 import PermPhoneMsgIcon from '@mui/icons-material/PermPhoneMsg';
+import MailIcon from '@mui/icons-material/Mail';
 
 export const Contact = () => {
     const [openSnackbar, setSnackbarState] = useState(false);
@@ -47,40 +49,55 @@ export const Contact = () => {
      }
     return (
         <Container maxWidth={'sm'}>
-            <Box sx={{marginTop: '25px', width: '100%'}}>
+            <Box sx={{marginTop: '45px', width: '100%'}}>
                 <Typography variant={'h1'}
                             gutterBottom
                             sx={{fontSize: '38px',  textAlign: 'center', fontWeight: 'bold'}}
 
                 >{t('contact')}</Typography>
                 <Divider />
-                <Box sx={{alignItems: 'center'}}>
-                    <List sx={{textAlign: 'center'}}>
+                <Box sx={{alignItems: 'start'}}>
+                    <List sx={{textAlign: 'start'}}>
                         <ListSubheader sx={{fontSize: '25px', fontWeight: 'bold'}}>
                             <PermPhoneMsgIcon sx={{marginRight: '15px'}} />
                             {t('phone')}
                         </ListSubheader>
                         <ListItem disablePadding>
-                            <ListItemButton sx={{display: 'flex', justifyContent: 'space-between'}}
-                                            onClick={() => copyValue(ContactData.numbers.OleksandrNumber)}>
-                                <Typography>
-                                    {t('oleksandr')}:
-                                </Typography>
-                                <Typography >{ContactData.numbers.OleksandrText}</Typography>
-                            </ListItemButton>
+                            <Tooltip title={t('clickToCopy')} placement="right">
+                                <ListItemButton sx={{display: 'flex', justifyContent: 'space-between'}}
+                                                onClick={() => copyValue(ContactData.numbers.OleksandrNumber)}>
+                                    <Typography>
+                                        {t('oleksandr')}:
+                                    </Typography>
+                                    <Typography >{ContactData.numbers.OleksandrText}</Typography>
+                                </ListItemButton>
+                            </Tooltip>
                         </ListItem>
-                        <ListItem disablePadding>
-                            <ListItemButton sx={{display: 'flex', justifyContent: 'space-between'}}
-                                            onClick={() => copyValue(ContactData.numbers.VasilyNumber)}>
-                                <Typography>
-                                    {t('vasily')}:
-                                </Typography>
-                                <Typography>{ContactData.numbers.VasilyText}</Typography>
-                            </ListItemButton>
+                        <ListItem disablePadding divider>
+                            <Tooltip title={t('clickToCopy')} placement="right">
+                                <ListItemButton sx={{display: 'flex', justifyContent: 'space-between'}}
+                                                onClick={() => copyValue(ContactData.numbers.VasilyNumber)}>
+                                    <Typography>
+                                        {t('vasily')}:
+                                    </Typography>
+                                    <Typography>{ContactData.numbers.VasilyText}</Typography>
+                                </ListItemButton>
+                            </Tooltip>
+                        </ListItem>
+                        <ListSubheader sx={{fontSize: '25px', fontWeight: 'bold'}}>
+                            <MailIcon sx={{marginRight: '15px'}} />
+                            {t('email')}
+                        </ListSubheader>
+                        <ListItem disablePadding divider>
+                            <Tooltip title={t('clickToCopy')} placement="right">
+                                <ListItemButton sx={{display: 'flex', justifyContent: 'start'}}
+                                                onClick={() => copyValue(ContactData.email)}>
+                                    <Typography>{ContactData.email}</Typography>
+                                </ListItemButton>
+                            </Tooltip>
                         </ListItem>
                     </List>
                 </Box>
-                <Divider />
             </Box>
             <Box sx={{ width: 150 }}>
                   <Snackbar
@@ -88,7 +105,7 @@ export const Contact = () => {
                     open={openSnackbar}
                     onClose={handleClose}
                   >
-                      <Alert severity="success" onClose={handleClose}>{copiedValue} copied</Alert>
+                      <Alert severity="success" onClose={handleClose}>{copiedValue}&nbsp;{t('copied')}</Alert>
                   </Snackbar>
             </Box>
         </Container>

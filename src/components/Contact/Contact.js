@@ -1,4 +1,4 @@
-import {useState} from 'react'
+import {useState, useRef, useEffect} from 'react'
 import { useTranslation } from 'react-i18next'
 import {
     Container,
@@ -17,22 +17,31 @@ import { ContactData } from '../../constants'
 import PermPhoneMsgIcon from '@mui/icons-material/PermPhoneMsg';
 
 export const Contact = () => {
-    const [openSnackbar, setState] = useState(false);
+    const [openSnackbar, setSnackbarState] = useState(false);
     const [copiedValue, setCopiedValue] = useState(null);
 
+    const timeoutID = useRef(null);
     const { t } = useTranslation();
     const handleClose = () => {
-        setState(false)
+        setSnackbarState(false)
+        return () => clearTimeout(timeoutID.current)
     }
      const copyValue = (text) => {
-         copy(text)
-         setCopiedValue(text)
-         setState(true)
-         setTimeout(() => handleClose(), 3000)
-         // TODO stop timeout!
+         handleClose();
+         copy(text);
+         setCopiedValue(text);
+         setSnackbarState(true);
+         timeoutID.current = setTimeout(() => {
+             handleClose()
+             return () => clearTimeout(timeoutID.current)
+         }, 3000)
          console.log(text, 'copied')
-
+         return () => clearTimeout(timeoutID.current)
      }
+     // useEffect(() => {
+     //     console.log(timeoutID.current, 'cur');
+     //     clearTimeout(timeoutID.current)
+     // }, [timeoutID.current] )
     return (
         <Container maxWidth={'sm'}>
             <Box sx={{marginTop: '25px', width: '100%'}}>
@@ -74,9 +83,9 @@ export const Contact = () => {
                   <Snackbar
                     anchorOrigin={{vertical: "bottom", horizontal: "left"}}
                     open={openSnackbar}
-                    onClose={handleClose}
+                    onClose={() => handleClose}
                   >
-                      <Alert severity="info" onClose={handleClose}>{copiedValue} copied</Alert>
+                      <Alert severity="info" onClose={() => handleClose}>{copiedValue} copied</Alert>
                   </Snackbar>
             </Box>
         </Container>

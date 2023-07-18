@@ -1,4 +1,4 @@
-import {useState, useRef, useEffect} from 'react'
+import { useState, useRef } from 'react'
 import { useTranslation } from 'react-i18next'
 import {
     Container,
@@ -22,26 +22,29 @@ export const Contact = () => {
 
     const timeoutID = useRef(null);
     const { t } = useTranslation();
-    const handleClose = () => {
+    const ClearTimeout = () => {
+        if (timeoutID.current) {
+            clearTimeout(timeoutID.current)
+            timeoutID.current = 0;
+        }
+    }
+    const handleClose = (e, reason) => {
+        if (reason === 'clickaway') {
+            return;
+        }
         setSnackbarState(false)
-        return () => clearTimeout(timeoutID.current)
+        return ClearTimeout();
     }
      const copyValue = (text) => {
-         handleClose();
+         ClearTimeout();
          copy(text);
          setCopiedValue(text);
          setSnackbarState(true);
          timeoutID.current = setTimeout(() => {
              handleClose()
-             return () => clearTimeout(timeoutID.current)
+             return ClearTimeout()
          }, 3000)
-         console.log(text, 'copied')
-         return () => clearTimeout(timeoutID.current)
      }
-     // useEffect(() => {
-     //     console.log(timeoutID.current, 'cur');
-     //     clearTimeout(timeoutID.current)
-     // }, [timeoutID.current] )
     return (
         <Container maxWidth={'sm'}>
             <Box sx={{marginTop: '25px', width: '100%'}}>
@@ -83,9 +86,9 @@ export const Contact = () => {
                   <Snackbar
                     anchorOrigin={{vertical: "bottom", horizontal: "left"}}
                     open={openSnackbar}
-                    onClose={() => handleClose}
+                    onClose={handleClose}
                   >
-                      <Alert severity="info" onClose={() => handleClose}>{copiedValue} copied</Alert>
+                      <Alert severity="success" onClose={handleClose}>{copiedValue} copied</Alert>
                   </Snackbar>
             </Box>
         </Container>

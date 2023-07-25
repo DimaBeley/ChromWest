@@ -1,29 +1,17 @@
-import AdbIcon from "@mui/icons-material/Adb";
-import { Typography } from "@mui/material";
-import * as React from "react";
+import { Box } from "@mui/material";
+import logo from '../../img/ChromwestLogo.png'
 
 export const LogoMobile = () => {
-    return (
-        <>
-            <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
-            <Typography
-              variant="h5"
-              noWrap
-              component="a"
-              href=""
-              sx={{
-                mr: 2,
-                display: { xs: 'flex', md: 'none' },
-                flexGrow: 1,
-                fontFamily: 'monospace',
-                fontWeight: 700,
-                letterSpacing: '.3rem',
-                color: 'inherit',
-                textDecoration: 'none',
-              }}
-            >
-              LOGO
-            </Typography>
-        </>
-    )
+ return (
+     <Box component={'div'}
+          sx={{
+              height: '70px',
+              display: { xs: 'flex', md: 'none' },
+              backgroundImage: `url(${logo})`,
+              backgroundSize: 'cover',
+              width: '120px',
+              marginLeft: '11%',
+          }}>
+     </Box>
+ )
 }

@@ -10,6 +10,12 @@ export const Theme = createTheme({
     },
   },
   components : {
+    MuiContainer: {
+      styleOverrides: {
+        root: {
+        }
+      }
+    },
     MuiMenu: {
       styleOverrides: {
         root: {

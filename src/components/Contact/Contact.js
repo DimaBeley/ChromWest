@@ -48,8 +48,8 @@ export const Contact = () => {
          }, 3000)
      }
     return (
-        <Container maxWidth={'sm'}>
-            <Box sx={{marginTop: '45px', width: '100%'}}>
+        <Container maxWidth={'md'}>
+            <Box sx={{marginTop: '25px', width: '100%'}}>
                 <Typography variant={'h1'}
                             gutterBottom
                             sx={{fontSize: '38px',  textAlign: 'center', fontWeight: 'bold'}}

@@ -5,6 +5,6 @@ export const resources = {
     translation: en
   },
   ua: {
-    translation: ua,
-  },
-};
+    translation: ua
+  }
+}

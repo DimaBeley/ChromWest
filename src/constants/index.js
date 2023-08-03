@@ -1,7 +1,7 @@
 export const LANGUAGES = [
-  { label: "Українська", code: "ua" },
-  { label: "English", code: "en" },
-];
+  { label: 'Українська', code: 'ua' },
+  { label: 'English', code: 'en' }
+]
 
 export const ContactData = {
   numbers: {

@@ -1,15 +1,15 @@
-import { createTheme } from '@mui/material/styles';
+import { createTheme } from '@mui/material/styles'
 
 export const Theme = createTheme({
   palette: {
     primary: {
-      main: '#bdbdbd',
+      main: '#bdbdbd'
     },
     secondary: {
-      main: '#9e9e9e',
-    },
+      main: '#9e9e9e'
+    }
   },
-  components : {
+  components: {
     MuiContainer: {
       styleOverrides: {
         root: {
@@ -31,20 +31,20 @@ export const Theme = createTheme({
           margin: 0,
           ':hover': {
             ':before': {
-              borderBottom: '1px solid black !important',
+              borderBottom: '1px solid black !important'
             }
           },
           ':before': {
-              border: 'none',
+            border: 'none'
           },
           ':after': {
             border: 'none'
           },
           '& :focus': {
-            borderRadius: '4px !important',
-          },
+            borderRadius: '4px !important'
+          }
         }
       }
-    },
-  },
-});
+    }
+  }
+})

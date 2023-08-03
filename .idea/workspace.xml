@@ -33,6 +33,7 @@
       <change beforePath="$PROJECT_DIR$/src/components/Navbar/theme.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar/theme.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/constants/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/data.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/data.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/ChromwestLogo.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/ChromwestLogo.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/img/icon/language.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/icon/language.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/img/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/logo.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
@@ -75,21 +76,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;Z:/work/chromwest&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;ssh.settings&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\WebStorm 2022.2.3\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "Z:/work/chromwest",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.sourceCode.JavaScript",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2022.2.3\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="Z:\work\chromwest\src\translations" />
@@ -121,7 +122,9 @@
       <workItem from="1689382623349" duration="3127000" />
       <workItem from="1689606051131" duration="15360000" />
       <workItem from="1689768372845" duration="5033000" />
-      <workItem from="1690295760486" duration="10280000" />
+      <workItem from="1690295760486" duration="10805000" />
+      <workItem from="1690556300444" duration="3657000" />
+      <workItem from="1691077460818" duration="4128000" />
     </task>
     <servers />
   </component>

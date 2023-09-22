@@ -11,7 +11,6 @@ export const LogoDesktop = () => {
             backgroundSize: 'cover',
             width: '120px'
           }}>
-
      </Box>
   )
 }

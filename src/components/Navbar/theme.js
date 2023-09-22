@@ -1,12 +1,13 @@
 import { createTheme } from '@mui/material/styles'
+import { ThemeConstants } from '../../constants'
 
 export const Theme = createTheme({
   palette: {
     primary: {
-      main: '#bdbdbd'
+      main: ThemeConstants.primaryColor
     },
     secondary: {
-      main: '#9e9e9e'
+      main: ThemeConstants.secondaryColor
     }
   },
   components: {

@@ -73,17 +73,6 @@ export const Contact = () => {
                 </ListItemButton>
               </Tooltip>
             </ListItem>
-            <ListItem disablePadding divider>
-              <Tooltip title={t('clickToCopy')} placement="right">
-                <ListItemButton sx={{ display: 'flex', justifyContent: 'space-between' }}
-                                onClick={() => copyValue(ContactData.numbers.VasilyNumber)}>
-                  <Typography>
-                      {t('vasily')}:
-                  </Typography>
-                  <Typography>{ContactData.numbers.VasilyText}</Typography>
-                </ListItemButton>
-              </Tooltip>
-              </ListItem>
             <ListSubheader sx={{ fontSize: '25px', fontWeight: 'bold' }}>
               <MailIcon sx={{ marginRight: '15px' }} />
               {t('email')}

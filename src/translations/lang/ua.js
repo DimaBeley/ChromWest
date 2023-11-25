@@ -1,4 +1,5 @@
 export const ua = {
+  gallery: 'Галерея',
   home: 'Головна',
   about: 'Про нас',
   contact: 'Контакти',

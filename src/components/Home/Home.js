@@ -1,36 +1,111 @@
+import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Container, Typography, Box } from '@mui/material'
-import { Navigation, Pagination, Scrollbar, A11y, Controller } from 'swiper/modules'
-import { Swiper, SwiperSlide } from 'swiper/react'
-import 'swiper/css'
-import 'swiper/css/navigation'
-import 'swiper/css/pagination'
-
+import { Container, Box, ImageListItem, ImageList, Typography, Modal } from '@mui/material'
+// TODO uninstall swiper
 export const Home = () => {
+  const modalStyle = {
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    width: 500,
+    maxHeight: 800,
+    bgcolor: 'background.paper',
+    border: '2px solid #000',
+    boxShadow: 24,
+    p: 4
+  }
+  const itemData = [
+    {
+      img: 'https://images.unsplash.com/photo-1549388604-817d15aa0110',
+      title: 'Bed'
+    },
+    {
+      img: 'https://images.unsplash.com/photo-1525097487452-6278ff080c31',
+      title: 'Books'
+    },
+    {
+      img: 'https://images.unsplash.com/photo-1523413651479-597eb2da0ad6',
+      title: 'Sink'
+    },
+    {
+      img: 'https://images.unsplash.com/photo-1563298723-dcfebaa392e3',
+      title: 'Kitchen'
+    },
+    {
+      img: 'https://images.unsplash.com/photo-1588436706487-9d55d73a39e3',
+      title: 'Blinds'
+    },
+    {
+      img: 'https://images.unsplash.com/photo-1574180045827-681f8a1a9622',
+      title: 'Chairs'
+    },
+    {
+      img: 'https://images.unsplash.com/photo-1530731141654-5993c3016c77',
+      title: 'Laptop'
+    },
+    {
+      img: 'https://images.unsplash.com/photo-1481277542470-605612bd2d61',
+      title: 'Doors'
+    },
+    {
+      img: 'https://images.unsplash.com/photo-1517487881594-2787fef5ebf7',
+      title: 'Coffee'
+    },
+    {
+      img: 'https://images.unsplash.com/photo-1516455207990-7a41ce80f7ee',
+      title: 'Storage'
+    },
+    {
+      img: 'https://images.unsplash.com/photo-1597262975002-c5c3b14bbd62',
+      title: 'Candle'
+    },
+    {
+      img: 'https://images.unsplash.com/photo-1519710164239-da123dc03ef4',
+      title: 'Coffee table'
+    }
+  ]
+  const [open, setOpen] = useState(null)
+  const handleOpen = (id) => setOpen(id)
+  const handleClose = () => setOpen(null)
+
   const { t } = useTranslation()
   return (
     <Container>
-      <Box sx={{ marginTop: '25px', width: '100%', display: 'flex', justifyContent: 'center' }}>
-        <Swiper
-          modules={[Navigation, Pagination, Scrollbar, A11y, Controller]}
-          spaceBetween={50}
-          slidesPerView={1}
-          navigation
-          pagination={{ clickable: true }}
-          scrollbar={{ draggable: true }}
-          onSwiper={(swiper) => console.log(swiper)}
-          onSlideChange={() => console.log('slide change')}
-          style={{ width: '800px', height: '400px' }}
-        >
-          <SwiperSlide >Slide 1</SwiperSlide>
-          <SwiperSlide >Slide 2</SwiperSlide>
-          <SwiperSlide >Slide 3</SwiperSlide>
-          <SwiperSlide >Slide 4</SwiperSlide>
-          <SwiperSlide >Slide 5</SwiperSlide>
-          <SwiperSlide >Slide 6</SwiperSlide>
-          <SwiperSlide >Slide 7</SwiperSlide>
-          <SwiperSlide >Slide 8</SwiperSlide>
-        </Swiper>
+      <Box sx={{ marginTop: '25px' }}>
+        <Typography variant={'h1'}
+                    gutterBottom
+                    sx={{ fontSize: '38px', textAlign: 'center', fontWeight: 'bold' }}
+
+        >{t('gallery')}</Typography>
+      </Box>
+      <Box sx={{ width: '100%', alignItems: 'center' }}>
+        <ImageList variant="masonry" cols={3} gap={8}>
+          {itemData.map((item) => (
+              <>
+                <ImageListItem key={item.img} onClick={() => handleOpen(item.img)}>
+                  <img
+                      srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
+                      src={`${item.img}?w=248&fit=crop&auto=format`}
+                      alt={item.title}
+                      loading="lazy"
+                  />
+                </ImageListItem>
+                <Modal
+                    open={open === item.img}
+                    onClose={handleClose}
+                >
+                  <Box sx={modalStyle}>
+                    <img src={`${item.img}?w=248&fit=crop&auto=format`}
+                         alt={item.title}
+                         loading="lazy"
+                         style={{ width: '100%' }}
+                    />
+                  </Box>
+                </Modal>
+              </>
+          ))}
+        </ImageList>
       </Box>
     </Container>
   )

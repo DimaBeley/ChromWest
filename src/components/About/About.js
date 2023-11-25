@@ -16,7 +16,7 @@ export const About = () => {
   const { t } = useTranslation()
   return (
     <Container maxWidth={'lg'}>
-      <Box sx={{ marginTop: '15px', width: '100%' }}>
+      <Box sx={{ marginTop: '25px', width: '100%' }}>
         <Typography variant={'h1'}
                     gutterBottom
                     sx={{ fontSize: '38px', textAlign: 'center', fontWeight: 'bold' }}>

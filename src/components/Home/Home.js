@@ -3,23 +3,10 @@ import { useTranslation } from 'react-i18next'
 import { Container, Box, ImageListItem, ImageList, Typography, Modal, ButtonGroup, Button } from '@mui/material'
 import { allImages } from './galleryImages'
 import { IMAGE_TYPES } from '../../constants/imageTypes'
+import styles from './Home.module.scss'
 
 // TODO uninstall swiper
 export const Home = () => {
-  const modalStyle = {
-    position: 'absolute',
-    top: '50%',
-    left: '50%',
-    transform: 'translate(-50%, -50%)',
-    width: 500,
-    maxHeight: 750,
-    bgcolor: 'background.paper',
-    boxShadow: 24,
-    padding: '4px 4px 0 4px',
-    overflow: 'hidden',
-    outline: 'none'
-  }
-
   const [open, setOpen] = useState(null)
   const [imageFilter, setFilter] = useState(null)
   const handleOpen = (id) => setOpen(id)
@@ -47,18 +34,17 @@ export const Home = () => {
           </Button>
           <Button onClick={() => setFilter(IMAGE_TYPES.chrome)}
                   style={{ backgroundColor: `${imageFilter === IMAGE_TYPES.chrome ? 'rgba(0, 0, 0, 0.2)' : ''}` }}
+
           >
             {t('chrome')}
           </Button>
           <Button onClick={() => setFilter(IMAGE_TYPES.copper)}
                   style={{ backgroundColor: `${imageFilter === IMAGE_TYPES.copper ? 'rgba(0, 0, 0, 0.2)' : ''}` }}
-
           >
             {t('copper')}
           </Button>
           <Button onClick={() => setFilter(IMAGE_TYPES.nickel)}
                   style={{ backgroundColor: `${imageFilter === IMAGE_TYPES.nickel ? 'rgba(0, 0, 0, 0.2)' : ''}` }}
-
           >
             {t('nickel')}
           </Button>
@@ -82,7 +68,7 @@ export const Home = () => {
                     key={`${item.img} ${item.type}`}
 
                 >
-                  <Box sx={modalStyle}>
+                  <Box className={styles.modalStyle}>
                     <img src={item.img}
                          alt={item.title}
                          loading="lazy"

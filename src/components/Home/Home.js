@@ -1,7 +1,9 @@
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Container, Box, ImageListItem, ImageList, Typography, Modal } from '@mui/material'
-import { chromeImage, nikelImages } from './galleryImages'
+import { Container, Box, ImageListItem, ImageList, Typography, Modal, ButtonGroup, Button } from '@mui/material'
+import { allImages } from './galleryImages'
+import { IMAGE_TYPES } from '../../constants/imageTypes'
+import styles from './Home.module.scss'
 
 // TODO uninstall swiper
 export const Home = () => {
@@ -19,10 +21,13 @@ export const Home = () => {
     outline: 'none'
   }
 
-  const allImages = [...chromeImage, ...nikelImages]
   const [open, setOpen] = useState(null)
+  const [filter, setFilter] = useState(null)
   const handleOpen = (id) => setOpen(id)
   const handleClose = () => setOpen(null)
+  const filtredImageList = (arr, filterType) => {
+    return filterType ? arr.filter(item => item.type === filterType) : arr
+  }
 
   const { t } = useTranslation()
   return (
@@ -34,9 +39,33 @@ export const Home = () => {
 
         >{t('gallery')}</Typography>
       </Box>
+      <Box sx={{ marginTop: '15px', textAlign: 'center' }}>
+        <ButtonGroup variant="text" aria-label="Image Filter">
+          <Button className={filter === null ? styles.activeButton : ''}
+                  onClick={() => setFilter(null)}
+          >
+            {t('all')}
+          </Button>
+          <Button onClick={() => setFilter(IMAGE_TYPES.chrome)}
+                  className={filter === IMAGE_TYPES.chrome ? styles.activeButton : ''}
+          >
+            {t('chrome')}
+          </Button>
+          <Button onClick={() => setFilter(IMAGE_TYPES.copper)}
+                  className={filter === IMAGE_TYPES.copper ? styles.activeButton : ''}
+          >
+            {t('copper')}
+          </Button>
+          <Button onClick={() => setFilter(IMAGE_TYPES.nickel)}
+                  className={filter === IMAGE_TYPES.nickel ? styles.activeButton : ''}
+          >
+            {t('nickel')}
+          </Button>
+        </ButtonGroup>
+      </Box>
       <Box sx={{ width: '100%', alignItems: 'center' }}>
         <ImageList variant="masonry" cols={4} gap={8}>
-          {allImages.map((item) => (
+          {filtredImageList(allImages, filter).map((item) => (
               <>
                 <ImageListItem key={item.img} onClick={() => handleOpen(item.img)} sx={{ overflow: 'hidden' }}>
                   <img
@@ -49,6 +78,7 @@ export const Home = () => {
                 <Modal
                     open={open === item.img}
                     onClose={handleClose}
+                    key={`${item.img} ${item.type}`}
 
                 >
                   <Box sx={modalStyle}>

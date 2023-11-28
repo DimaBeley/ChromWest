@@ -1,4 +1,8 @@
 export const ua = {
+  all: 'Всі',
+  copper: 'Мідь',
+  chrome: 'Хром',
+  nickel: 'Нікель',
   gallery: 'Галерея',
   home: 'Головна',
   about: 'Про нас',

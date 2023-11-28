@@ -6,3 +6,11 @@
   display: flex;
   justify-content: center;
 }
+.activeButton {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.filterButton {
+  transition: all 0.3ms;
+  padding: 0 20px 0 20px;
+}

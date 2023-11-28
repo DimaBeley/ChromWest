@@ -1,4 +1,8 @@
 export const en = {
+  all: 'All',
+  copper: 'Copper',
+  chrome: 'Chrome',
+  nickel: 'Nickel',
   gallery: 'Gallery',
   home: 'Home',
   about: 'About',

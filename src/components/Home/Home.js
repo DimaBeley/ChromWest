@@ -3,7 +3,6 @@ import { useTranslation } from 'react-i18next'
 import { Container, Box, ImageListItem, ImageList, Typography, Modal, ButtonGroup, Button } from '@mui/material'
 import { allImages } from './galleryImages'
 import { IMAGE_TYPES } from '../../constants/imageTypes'
-import styles from './Home.module.scss'
 
 // TODO uninstall swiper
 export const Home = () => {
@@ -22,10 +21,10 @@ export const Home = () => {
   }
 
   const [open, setOpen] = useState(null)
-  const [filter, setFilter] = useState(null)
+  const [imageFilter, setFilter] = useState(null)
   const handleOpen = (id) => setOpen(id)
   const handleClose = () => setOpen(null)
-  const filtredImageList = (arr, filterType) => {
+  const filteredImageList = (arr, filterType) => {
     return filterType ? arr.filter(item => item.type === filterType) : arr
   }
 
@@ -41,23 +40,25 @@ export const Home = () => {
       </Box>
       <Box sx={{ marginTop: '15px', textAlign: 'center' }}>
         <ButtonGroup variant="text" aria-label="Image Filter">
-          <Button className={filter === null ? styles.activeButton : ''}
+          <Button style={{ backgroundColor: `${imageFilter === null ? 'rgba(0, 0, 0, 0.2)' : ''}` }}
                   onClick={() => setFilter(null)}
           >
             {t('all')}
           </Button>
           <Button onClick={() => setFilter(IMAGE_TYPES.chrome)}
-                  className={filter === IMAGE_TYPES.chrome ? styles.activeButton : ''}
+                  style={{ backgroundColor: `${imageFilter === IMAGE_TYPES.chrome ? 'rgba(0, 0, 0, 0.2)' : ''}` }}
           >
             {t('chrome')}
           </Button>
           <Button onClick={() => setFilter(IMAGE_TYPES.copper)}
-                  className={filter === IMAGE_TYPES.copper ? styles.activeButton : ''}
+                  style={{ backgroundColor: `${imageFilter === IMAGE_TYPES.copper ? 'rgba(0, 0, 0, 0.2)' : ''}` }}
+
           >
             {t('copper')}
           </Button>
           <Button onClick={() => setFilter(IMAGE_TYPES.nickel)}
-                  className={filter === IMAGE_TYPES.nickel ? styles.activeButton : ''}
+                  style={{ backgroundColor: `${imageFilter === IMAGE_TYPES.nickel ? 'rgba(0, 0, 0, 0.2)' : ''}` }}
+
           >
             {t('nickel')}
           </Button>
@@ -65,7 +66,7 @@ export const Home = () => {
       </Box>
       <Box sx={{ width: '100%', alignItems: 'center' }}>
         <ImageList variant="masonry" cols={4} gap={8}>
-          {filtredImageList(allImages, filter).map((item) => (
+          {filteredImageList(allImages, imageFilter).map((item) => (
               <>
                 <ImageListItem key={item.img} onClick={() => handleOpen(item.img)} sx={{ overflow: 'hidden' }}>
                   <img

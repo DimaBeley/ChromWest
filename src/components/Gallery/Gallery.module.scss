@@ -1,0 +1,35 @@
+.activeButton {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.filterButton {
+  transition: all 0.3ms;
+  padding: 0 20px 0 20px;
+}
+
+.modalStyle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  max-height: 750px;
+  background-color: whitesmoke;
+  box-shadow: 0 11px 15px -7px rgba(0,0,0,0.2), 0 24px 38px 3px rgba(0,0,0,0.14), 0 9px 46px 8px rgba(0,0,0,0.12);
+  padding: 4px 4px 0 4px;
+  overflow: hidden;
+  outline: none;
+}
+
+@media screen and (min-width: 300px) {
+  .modalStyle {
+    width: 300px;
+    max-height: 550px;
+  }
+}
+@media screen and (min-width: 640px) {
+  .modalStyle {
+    width: 400px;
+    max-height: 650px;
+  }
+}

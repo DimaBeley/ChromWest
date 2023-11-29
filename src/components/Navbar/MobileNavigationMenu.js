@@ -3,6 +3,7 @@ import MenuIcon from '@mui/icons-material/Menu'
 import { NavItem } from './NavItem'
 import * as React from 'react'
 import { useTranslation } from 'react-i18next'
+import { navigationItems } from './navigationData'
 
 export const MobileNavigationMenu = () => {
   const { t } = useTranslation()
@@ -43,17 +44,16 @@ export const MobileNavigationMenu = () => {
               onClose={handleCloseNavMenu}
               sx={{ display: { xs: 'block', md: 'none' } }}
             >
-                <MenuItem onClick={handleCloseNavMenu} sx={{ padding: 0 }}>
-                    <NavItem text={t('home')} link={'/'} />
-                </MenuItem>
-                <Divider sx={{ margin: '0 !important' }} />
-                <MenuItem onClick={handleCloseNavMenu} sx={{ padding: 0 }}>
-                    <NavItem text={t('about')} link={'/about'} />
-                </MenuItem>
-                <Divider sx={{ margin: '0 !important' }} />
-                <MenuItem onClick={handleCloseNavMenu} sx={{ padding: 0 }}>
-                    <NavItem text={t('contact')} link={'/contact'} />
-                </MenuItem>
+                {navigationItems.map((item) => {
+                  return (
+                      <div key={`${item.name} ${item.link}`}>
+                        <MenuItem onClick={handleCloseNavMenu} sx={{ padding: 0 }}>
+                            <NavItem text={t(item.name)} link={item.link} />
+                        </MenuItem>
+                        <Divider sx={{ margin: '0 !important' }} />
+                      </div>
+                  )
+                })}
             </Menu>
           </Box>
   )

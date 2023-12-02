@@ -14,7 +14,7 @@ import {
   Tooltip
 } from '@mui/material'
 import copy from 'copy-to-clipboard'
-import { ContactData } from '../../constants'
+import { contactData } from '../../constants'
 import PermPhoneMsgIcon from '@mui/icons-material/PermPhoneMsg'
 import MailIcon from '@mui/icons-material/Mail'
 
@@ -65,11 +65,11 @@ export const Contact = () => {
             <ListItem disablePadding>
               <Tooltip title={t('clickToCopy')} placement="right">
                 <ListItemButton sx={{ display: 'flex', justifyContent: 'space-between' }}
-                              onClick={() => copyValue(ContactData.numbers.OleksandrNumber)}>
+                              onClick={() => copyValue(contactData.numbers.OleksandrNumber)}>
                   <Typography>
                       {t('oleksandr')}:
                   </Typography>
-                  <Typography >{ContactData.numbers.OleksandrText}</Typography>
+                  <Typography >{contactData.numbers.OleksandrText}</Typography>
                 </ListItemButton>
               </Tooltip>
             </ListItem>
@@ -80,8 +80,8 @@ export const Contact = () => {
             <ListItem disablePadding divider>
               <Tooltip title={t('clickToCopy')} placement="right">
                 <ListItemButton sx={{ display: 'flex', justifyContent: 'start' }}
-                              onClick={() => copyValue(ContactData.email)}>
-                  <Typography>{ContactData.email}</Typography>
+                              onClick={() => copyValue(contactData.email)}>
+                  <Typography>{contactData.email}</Typography>
                 </ListItemButton>
               </Tooltip>
             </ListItem>

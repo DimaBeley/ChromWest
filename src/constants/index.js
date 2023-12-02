@@ -3,7 +3,7 @@ export const LANGUAGES = [
   { label: 'English', code: 'en' }
 ]
 
-export const ContactData = {
+export const contactData = {
   numbers: {
     OleksandrText: '+38(097)-874-5537',
     OleksandrNumber: '+380978745537'

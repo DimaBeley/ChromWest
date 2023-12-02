@@ -7,6 +7,7 @@ import {
   List,
   ListItem
 } from '@mui/material'
+import { contactData } from '../../constants'
 
 import PermPhoneMsgIcon from '@mui/icons-material/PermPhoneMsg'
 
@@ -59,10 +60,12 @@ export const About = () => {
         </Typography>
       </Box>
       <Divider />
-      <Box sx={{ display: 'flex', justifyContent: 'center', margitTop: '25px' }}>
+      <Box sx={{ display: 'flex', justifyContent: 'space-around', marginTop: '25px' }}>
           <Typography variant={'h4'}>
               <PermPhoneMsgIcon /><NavItem text={`${t('contact')} ${t('us')}`} link={'/contact'} />
           </Typography>
+          <Typography>{t('phone')}: {contactData.numbers.OleksandrNumber}</Typography>
+          <Typography>{t('email')}: {contactData.email}</Typography>
       </Box>
     </Container>
   )

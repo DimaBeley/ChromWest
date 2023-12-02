@@ -1,52 +1,8 @@
-@mixin main-bg {
-  //background-image: url("../public/images/mainBg.png");
-  //background-size: 80%;
-}
-
-@mixin flex-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-@mixin flex-start {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-@mixin flex-end {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-
-@mixin full-screen {
-  height: 100%;
-  width: 100%;
-}
-@mixin border-radius {
-  border-radius: 4px;
-}
 @mixin background-color {
-  background-color: rgba(0,0,0, 0.1);
+  background-color: rgba(0,0,0, 0.2);
 }
 
 @mixin border-bottom {
   border-bottom: 1px solid black;
   margin-bottom: -1px;
 }
-
-@mixin container {
-  @include full-screen;
-  display: flex;
-  overflow: auto;
-  flex-direction: column;
-}
-
-@mixin content {
-  flex-direction: row;
-  width: 100%;
-  outline: 4px solid black;
-}
-
-
